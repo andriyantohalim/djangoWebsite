@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'products' %}">Products</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <!-- Add other navigation links here -->
+        </ul>
+    </nav>
+</head>
+<main>
+    {% block content %}{% endblock %}
+</main>
+<footer>
+    <p>&copy; {{ year }} My Website. All rights reserved.</p>
+</footer>
+</html>
